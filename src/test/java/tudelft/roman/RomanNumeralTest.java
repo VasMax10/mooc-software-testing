@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public class RomanNumeralTest {
 
-
     @Test
     public void singleNumber() {
         RomanNumeral roman = new RomanNumeral();
@@ -32,5 +31,21 @@ public class RomanNumeralTest {
         RomanNumeral roman = new RomanNumeral();
         int result = roman.convert("XLIV");
         Assertions.assertEquals(44, result);
+    }
+
+    @Test
+    public void numberWithAllNumbers(){
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("MDCLXVI");
+
+        Assertions.assertEquals(1666, result);
+    }
+
+    @Test
+    public void emptyNumber(){
+        RomanNumeral roman = new RomanNumeral();
+        int result = roman.convert("");
+
+        Assertions.assertEquals(0, result);
     }
 }
