@@ -30,7 +30,7 @@ public class LeapYearTest {
 
     @Test
     public void nonLeapYears() {
-        
+
         Assertions.assertFalse(ly.isLeapYear(2017));
     }
 }
